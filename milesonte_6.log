@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.28)  2 APR 2020 22:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.28)  4 APR 2020 15:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -521,7 +521,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/Users/carinehajjar/Library/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.m
 ap}]
-</Users/carinehajjar/Desktop/table_1.png, id=95, 694.595pt x 614.295pt>
+</Users/carinehajjar/Desktop/table_1.png, id=91, 694.595pt x 614.295pt>
 File: /Users/carinehajjar/Desktop/table_1.png Graphic file (type png)
 <use /Users/carinehajjar/Desktop/table_1.png>
 Package pdftex.def Info: /Users/carinehajjar/Desktop/table_1.png  used on input
@@ -530,7 +530,7 @@ Package pdftex.def Info: /Users/carinehajjar/Desktop/table_1.png  used on input
 [2]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <9> on input line 191.
-<milesonte_6_files/figure-latex/unnamed-chunk-3-1.pdf, id=111, 469.755pt x 325.
+<milesonte_6_files/figure-latex/unnamed-chunk-3-1.pdf, id=106, 469.755pt x 325.
 215pt>
 File: milesonte_6_files/figure-latex/unnamed-chunk-3-1.pdf Graphic file (type p
 df)
@@ -538,7 +538,7 @@ df)
 Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-3-1.pdf  
 used on input line 196.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<milesonte_6_files/figure-latex/unnamed-chunk-3-2.pdf, id=112, 469.755pt x 325.
+<milesonte_6_files/figure-latex/unnamed-chunk-3-2.pdf, id=107, 469.755pt x 325.
 215pt>
 File: milesonte_6_files/figure-latex/unnamed-chunk-3-2.pdf Graphic file (type p
 df)
@@ -546,7 +546,7 @@ df)
 Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-3-2.pdf  
 used on input line 196.
 (pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
-<milesonte_6_files/figure-latex/unnamed-chunk-3-3.pdf, id=113, 469.755pt x 325.
+<milesonte_6_files/figure-latex/unnamed-chunk-3-3.pdf, id=108, 469.755pt x 325.
 215pt>
 File: milesonte_6_files/figure-latex/unnamed-chunk-3-3.pdf Graphic file (type p
 df)
@@ -574,51 +574,175 @@ Overfull \vbox (25.78995pt too high) has occurred while \output is active []
 
 [6 <./milesonte_6_files/figure-latex/unnamed-chunk-3-1.pdf> <./milesonte_6_file
 s/figure-latex/unnamed-chunk-3-2.pdf>] [7 <./milesonte_6_files/figure-latex/unn
-amed-chunk-3-3.pdf>] [8] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
+amed-chunk-3-3.pdf>]
+File: /Users/carinehajjar/Desktop/table_1.png Graphic file (type png)
+<use /Users/carinehajjar/Desktop/table_1.png>
+Package pdftex.def Info: /Users/carinehajjar/Desktop/table_1.png  used on input
+ line 298.
+(pdftex.def)             Requested size: 469.77467pt x 415.46545pt.
+<milesonte_6_files/figure-latex/unnamed-chunk-5-1.pdf, id=157, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-5-1.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-5-1.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-5-1.pdf  
+used on input line 301.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Overfull \hbox (275.24815pt too wide) in paragraph at lines 298--304
+\T1/lmr/m/n/10 *** ## Fig-ure 1: Av-er-age Treat-ment Ef-fect by Party Af-fil-i
+-a-tion []
+ []
+
+[8] [9]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+08.
+(/Users/carinehajjar/Library/TinyTeX/texmf-dist/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+) [10 <./milesonte_6_files/figure-latex/unnamed-chunk-5-1.pdf>]
+LaTeX Font Info:    Trying to load font information for TS1+lmtt on input line 
+335.
+(/Users/carinehajjar/Library/TinyTeX/texmf-dist/tex/latex/lm/ts1lmtt.fd
+File: ts1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<milesonte_6_files/figure-latex/unnamed-chunk-6-1.pdf, id=181, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-6-1.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-6-1.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-6-1.pdf  
+used on input line 337.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<milesonte_6_files/figure-latex/unnamed-chunk-6-2.pdf, id=182, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-6-2.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-6-2.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-6-2.pdf  
+used on input line 337.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+[][]
+ []
+
+[11 <./milesonte_6_files/figure-latex/unnamed-chunk-6-1.pdf>] [12 <./milesonte_
+6_files/figure-latex/unnamed-chunk-6-2.pdf>]
+<milesonte_6_files/figure-latex/unnamed-chunk-7-1.pdf, id=211, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-7-1.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-7-1.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-7-1.pdf  
+used on input line 379.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<milesonte_6_files/figure-latex/unnamed-chunk-7-2.pdf, id=212, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-7-2.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-7-2.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-7-2.pdf  
+used on input line 379.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--380
+[][]
+ []
+
+[13 <./milesonte_6_files/figure-latex/unnamed-chunk-7-1.pdf>] [14 <./milesonte_
+6_files/figure-latex/unnamed-chunk-7-2.pdf>]
+<milesonte_6_files/figure-latex/unnamed-chunk-8-1.pdf, id=241, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-8-1.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-8-1.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-8-1.pdf  
+used on input line 413.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<milesonte_6_files/figure-latex/unnamed-chunk-8-2.pdf, id=242, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-8-2.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-8-2.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-8-2.pdf  
+used on input line 413.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 413--414
+[][]
+ []
+
+[15 <./milesonte_6_files/figure-latex/unnamed-chunk-8-1.pdf>] [16 <./milesonte_
+6_files/figure-latex/unnamed-chunk-8-2.pdf>]
+<milesonte_6_files/figure-latex/unnamed-chunk-9-1.pdf, id=270, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-9-1.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-9-1.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-9-1.pdf  
+used on input line 447.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+<milesonte_6_files/figure-latex/unnamed-chunk-9-2.pdf, id=271, 469.755pt x 325.
+215pt>
+File: milesonte_6_files/figure-latex/unnamed-chunk-9-2.pdf Graphic file (type p
+df)
+<use milesonte_6_files/figure-latex/unnamed-chunk-9-2.pdf>
+Package pdftex.def Info: milesonte_6_files/figure-latex/unnamed-chunk-9-2.pdf  
+used on input line 447.
+(pdftex.def)             Requested size: 469.75386pt x 325.2142pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 447--448
+[][]
+ []
+
+[17 <./milesonte_6_files/figure-latex/unnamed-chunk-9-1.pdf>] [18 <./milesonte_
+6_files/figure-latex/unnamed-chunk-9-2.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 497.
+[19]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 497.
 (./milesonte_6.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 497.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 497.
 Package rerunfilecheck Info: File `milesonte_6.out' has not changed.
-(rerunfilecheck)             Checksum: FDD5D3C37D327551CFE92D4E789B762E;1887.
+(rerunfilecheck)             Checksum: 66F0A2A2E30940DB644E7EAEF36EAF73;2755.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 497.
  ) 
 Here is how much of TeX's memory you used:
- 10237 strings out of 482913
- 148460 string characters out of 5957952
- 406790 words of memory out of 5000000
- 25266 multiletter control sequences out of 15000+600000
- 606403 words of font info for 74 fonts, out of 8000000 for 9000
+ 10374 strings out of 482913
+ 153074 string characters out of 5957952
+ 406940 words of memory out of 5000000
+ 25379 multiletter control sequences out of 15000+600000
+ 607027 words of font info for 76 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 34i,10n,34p,976b,367s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.
-enc}{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-maths
-y.enc}{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.
-enc}</Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx1
-0.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmb
-x12.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/l
-mbxi10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/l
-m/lmmi9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/
-lm/lmr10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public
-/lm/lmr12.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
-c/lm/lmr17.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr6.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr7.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr8.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmr9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publ
-ic/lm/lmri10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/pu
-blic/lm/lmri9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/p
-ublic/lm/lmsy6.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/
-public/lm/lmsy9.pfb>
-Output written on milesonte_6.pdf (10 pages, 493248 bytes).
+ 34i,10n,34p,976b,461s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+}{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{
+/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+}{/Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.e
+nc}</Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10
+.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx
+12.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm/lm
+bxi10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/lm
+/lmmi9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/l
+m/lmr10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public/
+lm/lmr12.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/public
+/lm/lmr17.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr6.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr7.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr8.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmr9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/publi
+c/lm/lmri10.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/pub
+lic/lm/lmri9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/pu
+blic/lm/lmsy6.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/p
+ublic/lm/lmsy9.pfb></Users/carinehajjar/Library/TinyTeX/texmf-dist/fonts/type1/
+public/lm/lmtt10.pfb>
+Output written on milesonte_6.pdf (19 pages, 574571 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 52 named destinations out of 1000 (max. 500000)
- 141 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 392 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 59 named destinations out of 1000 (max. 500000)
+ 178 words of extra memory for PDF output out of 10000 (max. 10000000)
 
