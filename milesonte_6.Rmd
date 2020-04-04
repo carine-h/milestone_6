@@ -60,11 +60,7 @@ All analysis for this paper is available at my Git hub profile and the original 
 
 
 ## Figure 
-*The original figure in the paper:*
-<center>
-![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
-<center>
-***
+
 ```{r}
 data <- read.dta13("Ideology_Trump.dta")
 
@@ -132,6 +128,7 @@ cat("\\end{table}")
 
 
 ```
+![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
 
 ## Graphic
 ```{r}
@@ -256,6 +253,9 @@ republican_cue_response + rep_theme + labs(title = "Cue Effects on Independents"
 
 ```
 <br>
+<br>
+
+
 In these three plots, I demonstrate the effect of different political cues on different political groups in the study. In the paper, there is a graphic with this data however it combines nine models in one plot, making it quite difficult to decipher. I decided to split this plot up into three: one for each political group. Each graph looks at the increased probability of voting for liberal policies after receiving a conservative or liberal cue from President Trump as well as a conservative cue from GOP congressional leaders.
 
 The first graph looks at the impact of these cues on Republicans' political tendencies. The plot shows that Republicans side more conservatively when they receive a conservative cue from Trump and side more liberally when they receive a liberal cue from Trump. There is a negligible effect from GOP congressional cues. 
@@ -273,10 +273,8 @@ As mentioned above, this paper has a main hypothesis and four sub-hypotheses. Th
  
 For my replication, I will look at a table with regressions for each of these hypotheses as well as five figures that plot the outcomes of these hypotheses. 
 
-***
 
 ## Table 1
-<br>
 ```{r table 1}
 data <- read.dta13("Ideology_Trump.dta")
 
@@ -321,7 +319,7 @@ model4 <- lm(Support ~ libtrump*ideo5b + contrump*ideo5b + knowledge
                      data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),])
 # The outcome of Model 4 shows us that those who identify as strongly conservative are more likely to respond to Trump cues, whether liberal or conservative.
 ```
-*My stargazer figure:*
+
 ```{r, results= "asis"}
 cat("\\begin{table}[!htbp]")
 cat("\\centering")
@@ -347,10 +345,9 @@ cat("\\end{table}")
 ```
 
 *The original figure in the paper:*
-<center>
+
 ![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
-<br>
-***
+
 ## Figure 1: Average Treatment Effect by Party Affiliation
 ```{r}
 # We are looking to see the effect of different cues (liberal, conservative, and conservative from congress) on Republicans, Democrats, and Independents. 
@@ -433,6 +430,9 @@ text(.82, -.01, "Democrats", cex = .7)
 text(1.4, .04, "Independents", cex = .7)
 box()
 ```
+<br>
+<br>
+
 It is important to note that what is being plotted is the coefficient of cues (contrump, libtrump, gopleader).
 I found one mistake - the cofficient for Republicans in Congress on the Republican subset is displayed as about -0.03 probability of voting for liberal policy while the regression tells us that it is actually about 0.008. 
 
@@ -441,7 +441,7 @@ I found one mistake - the cofficient for Republicans in Congress on the Republic
 # This code will culminate in plot that looks at the treatment effect (political cue) on those with varying political knowledge. # The hypothesis here states: Only the those with less knowledge should react to the cue and behave as party loyalists presumably because the knowledgeable gain little from the treatment (political cue).
 
 # Model 1 is a linear regression that looks that the impact of political knowledge on response to cues. The authors include an interaction between liberal cues and knowledge as well as conservative cues and knowledge to see if there is any discrepancy between cues' effects with knowledge:
-summary(model1 <- lm(Support ~ race_white + libtrump*knowledge + contrump*knowledge, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),]))
+model1 <- lm(Support ~ race_white + libtrump*knowledge + contrump*knowledge, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),])
 #control: there is no cue in this data table
 newdata = as.data.frame(cbind(rep(1, 9), rep(0, 9), rep(0, 9), seq(0, 8, 1)))
 colnames(newdata) <- c("race_white", "contrump", "libtrump", "knowledge")
@@ -516,7 +516,7 @@ box()
 # The hypothesis here states: Strong party affiliates that share party with the cue-giver are more likely to be party loyalists.
 
 # This model is the basis of the predictions and will help determine the causal effect of political cues on different levels of partisanship among Republicans. This model estimates support of policy based on race and the interaction between cues (conservative and liberal) and political ideology:
-summary(model1 <- lm(Support ~ race_white + libtrump*pid7 + contrump*pid7, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1) & data$pid7 %in% c(4, 5, 6, 7),]))
+model1 <- lm(Support ~ race_white + libtrump*pid7 + contrump*pid7, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1) & data$pid7 %in% c(4, 5, 6, 7),])
 # This data table serves as the control - the baseline for comparison. There is no cue in this data table:
 newdata = as.data.frame(cbind(rep(1, 4), rep(0, 4), rep(0, 4), seq(4, 7, 1)))
 colnames(newdata) <- c("race_white", "contrump", "libtrump", "pid7")
@@ -587,7 +587,7 @@ box()
 # The hypothesis here states: Those who approve of the cue-giver should be more likely to be party loyalists. 
 
 # This model is the basis of the predictions and will help determine the causal effect of political cues on different levels of approval of Trump. This model estimates support of policy based on race and the interaction between cues (conservative and liberal) and approval:
-summary(model1 <- lm(Support ~ race_white + libtrump*trump_approve + contrump*trump_approve, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),]))
+model1 <- lm(Support ~ race_white + libtrump*trump_approve + contrump*trump_approve, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),])
 # This data table serves as the control - the baseline for comparison. There is no cue in this data table:
 newdata = as.data.frame(cbind(rep(1, 5), rep(0, 5), rep(0, 5), seq(1, 5, 1)))
 colnames(newdata) <- c("race_white", "contrump", "libtrump", "trump_approve")
@@ -653,7 +653,7 @@ box()
 # The hypothesis here states: Self-described conservatives should hold firm to their presumed beliefs and are less likely to be party loyalists because they stick with their self-described policy tenets.
 
 # The steps here are the same as those above, just using ideology. I will not go through each in detail.
-summary(model1 <- lm(Support ~ race_white + libtrump*ideo5b + contrump*ideo5b, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),]))
+model1 <- lm(Support ~ race_white + libtrump*ideo5b + contrump*ideo5b, data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),])
 #control
 newdata = as.data.frame(cbind(rep(1, 5), rep(0, 5), rep(0, 5), seq(1, 5, 1)))
 colnames(newdata) <- c("race_white", "contrump", "libtrump", "ideo5b")
