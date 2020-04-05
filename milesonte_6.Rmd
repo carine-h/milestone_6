@@ -34,7 +34,6 @@ mturk <- read.csv("Trump_Obama.csv")
 
 ```
 \newpage 
-
 # Milestone 5 Components:
 ## Overview of Paper
 My replication paper will be looking at Michael Barber and Jeremy C. Pope's paper, "Does Party Trump Ideologu? Disentangling Party and Ideology in America" which was published in the American Political Science Review in 2018. The paper tests whether citizens truly use their policy views to choose a partisan affiliation and if they see partisanship as more of a social identity. The paper asks: "how sincerely held are expressed political and policy opinions and are these opinions based on ideological convictions, or group loyalty?".^[1, Barber and Pope] The authors use Trump's unusual presidency to answer these questions. Since President Trump is both the leader of the GOP as well as a president that endorses both liberal and conservative views, the authors test the effect of Trump's political stances on voters' political stances. 
@@ -709,6 +708,7 @@ Finally, I want to take one of the figures (either 2 or 4) and see if I can crea
 
 
 # Citations
+The Github repo for this milestone in online.^["https://github.com/carine-h/milestone_6"]
 Here is an in text citation for the paper I am replicating as well as its Dataverse data: @main-paper and @dataverse.
 Here is an in text citation for the stargazer package I use: @stargazer.
 I used this paper for supplementary information: @paper2.
