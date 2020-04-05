@@ -4,18 +4,8 @@ author: "Carine Hajjar"
 date: "4/2/2020"
 output: bookdown::pdf_document2
 bibliography: bib.bib
+
 ---
-
-
-Milestone #6. Submit a PDF or html via Canvas. (I usually do everything in html until the very end of the process to avoid spending too much time fussing with annoying formating issues. We required you to submit that last two milestones in PDF in order to ensure that your computer was set up properly. The final submission will be in PDF.) 
-
-In addition to the the elements from Milestone #5, your paper should include:
-
-An Appendix in which you replicate all results — or all the important results — from your paper. As with other aspects of this project, the exact requirements will vary across students, depending on the complexity of your replication paper. If you paper only has 3 or 4 tables, we expect you to replicate it all. If it has 50 tables, we do not expect that. Use your best judgment and talk with us. ***You must replicate any result which you plan to use as the base of your extension.***
-
-A clear statement about what aspects of the paper you were able to replicate and which parts, if any, you were not able to replicate.
-
-500 words about your proposed extension. You do not have to have done the extension yet. (That comes next week.) But it is time to start thinking about what your contribution to human knowledge will be. You seek admission to the School of Athens. What do you have to offer us?
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE)
@@ -43,6 +33,7 @@ mturk <- read.csv("Trump_Obama.csv")
 
 
 ```
+\newpage 
 
 # Milestone 5 Components:
 ## Overview of Paper
@@ -61,7 +52,7 @@ All analysis for this paper is available at my Git hub profile and the original 
 
 ## Figure 
 
-```{r}
+```{r, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 data <- read.dta13("Ideology_Trump.dta")
 
 #summary(data)
@@ -103,9 +94,8 @@ model4 <- lm(Support ~ libtrump*ideo5b + contrump*ideo5b + knowledge
                      data = data[(data$contrump == 1 | data$self == 1 | data$libtrump == 1),])
 # The outcome of Model 4 shows us that those who identify as strongly conservative are more likely to respond to Trump cues, whether liberal or conservative.
 ```
-
-*My stargazer figure:*
-```{r, results= "asis"}
+ <br>
+```{r, results= "asis", fig.height = 4, fig.width= 6.5, fig.align= "center"}
 cat("\\begin{table}[!htbp]")
 cat("\\centering")
 cat("\\caption{Interaction Models, Including Control Variables}")
@@ -128,10 +118,12 @@ cat("\\end{table}")
 
 
 ```
+
 ![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
+<br>
 
 ## Graphic
-```{r}
+```{r, fig.height = 3, fig.width= 5}
 # I want to recreate figure 1 in the paper using ggplot. Figure one looks at which groups respond to which cues by looking at the average answers for each of the 10 questions. 
 # We are looking to see the effect of different cues (liberal, conservative, and conservative from congress) on Republicans, Democrats, and Independents. 
 # In terms of the regressions, I will be keeping the same data and roughly the same code. The way I graph it will be different:
@@ -186,30 +178,9 @@ gop.se <- c(coef(summary(model3))[, "Std. Error"][3], coef(summary(model3dem))[,
 # This creates confidence intervals for the effect of the GOP congressional cue on each group:
 lower.gop <- gop.treat - 1.96*gop.se
 upper.gop <- gop.treat + 1.96*gop.se
-
-
-# Was going to go down this path, but will not use these anymore.
-conservative_cue_tibble <- tribble(
-  ~party, ~prob_voting_lib, ~lower, ~upper, 
-  "Republican", -0.08676386, -0.13627592, -0.037251805,
-  "Democrat", -0.03155928, -0.05661010, -0.006508462,
-  "Independent", 0.02542649, -0.03718276, 0.088035746 
-)
-
-
-liberal_cue_tibble <- tribble(
- ~party, ~prob_voting_lib, ~lower, ~upper, 
-  "Republican", 0.160286183, 0.11467561, 0.20589675,
-  "Democrat", -0.002318269, -0.02805535, 0.02341881,
-  "Independent", 0.035306571, -0.02185457, 0.09246771  
-)
-
-gop_cue_tibble <- tribble(
- ~party, ~prob_voting_lib, ~lower, ~upper, 
-  "Republican", 0.008425144, -0.02973933, 0.04658962,
-  "Democrat", -0.001627154, -0.02121219, 0.01795788,
-  "Independent", -0.018261757 , -0.06512509, 0.02860158  
-)
+```
+<br>
+```{r, fig.height = 4, fig.width= 6.5}
 
 # Regression for average treatment effects of a conservative, liberal, and congression conservative cue among Republicans:
 republican_cue_response <- plot_summs(model1, model2, model3, 
@@ -223,7 +194,9 @@ rep_theme <- theme(
     legend.position = "none")
 # I put the graphs all together:
 republican_cue_response + rep_theme + labs(title = "Cue Effects on Republicans", x = "Increased Probability of Voting for Liberal Policy") 
-
+```
+<br>
+```{r, fig.height = 4, fig.width= 6.5}
 # Regression for average treatment effects of a conservative, liberal, and congression conservative cue among Democrats:
 republican_cue_response <- plot_summs(model1dem, model2dem, model3dem, 
            scale = TRUE, 
@@ -236,8 +209,9 @@ rep_theme <- theme(
     legend.position = "none")
 # I put the graphs all together
 republican_cue_response + rep_theme + labs(title = "Cue Effects on Democrats", x = "Increased Probability of Voting for Liberal Policy") 
-
-
+```
+<br>
+```{r, fig.height = 4, fig.width= 6.5}
 # Regression for average treatment effects of a conservative, liberal, and congression conservative cue among Independents:
 republican_cue_response <- plot_summs(model1ind, model2ind, model3ind, 
            scale = TRUE, 
@@ -253,8 +227,6 @@ republican_cue_response + rep_theme + labs(title = "Cue Effects on Independents"
 
 ```
 <br>
-<br>
-
 
 In these three plots, I demonstrate the effect of different political cues on different political groups in the study. In the paper, there is a graphic with this data however it combines nine models in one plot, making it quite difficult to decipher. I decided to split this plot up into three: one for each political group. Each graph looks at the increased probability of voting for liberal policies after receiving a conservative or liberal cue from President Trump as well as a conservative cue from GOP congressional leaders.
 
@@ -275,7 +247,7 @@ For my replication, I will look at a table with regressions for each of these hy
 
 
 ## Table 1
-```{r table 1}
+```{r table 1, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 data <- read.dta13("Ideology_Trump.dta")
 
 #summary(data)
@@ -320,7 +292,7 @@ model4 <- lm(Support ~ libtrump*ideo5b + contrump*ideo5b + knowledge
 # The outcome of Model 4 shows us that those who identify as strongly conservative are more likely to respond to Trump cues, whether liberal or conservative.
 ```
 
-```{r, results= "asis"}
+```{r, results= "asis", fig.height = 4, fig.width= 6.5, fig.align= "center"}
 cat("\\begin{table}[!htbp]")
 cat("\\centering")
 cat("\\caption{Interaction Models, Including Control Variables}")
@@ -344,12 +316,10 @@ cat("\\end{table}")
 
 ```
 
-*The original figure in the paper:*
-
 ![Table 1, Barber and Pope](/Users/carinehajjar/Desktop/table_1.png)
 
 ## Figure 1: Average Treatment Effect by Party Affiliation
-```{r}
+```{r, fig.height = 4, fig.width= 5, fig.align= "center"}
 # We are looking to see the effect of different cues (liberal, conservative, and conservative from congress) on Republicans, Democrats, and Independents. 
 
 # Regression for average treatment effects of a conservative, liberal, and congression conservative cue among Republicans:
@@ -431,13 +401,13 @@ text(1.4, .04, "Independents", cex = .7)
 box()
 ```
 <br>
-<br>
+![Figure 1, Barber and Pope](/Users/carinehajjar/Desktop/fig1.png)
 
 It is important to note that what is being plotted is the coefficient of cues (contrump, libtrump, gopleader).
 I found one mistake - the cofficient for Republicans in Congress on the Republican subset is displayed as about -0.03 probability of voting for liberal policy while the regression tells us that it is actually about 0.008. 
 
 ## Figure 2: Average Treatment Effect by Knowledge
-```{r}
+```{r, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 # This code will culminate in plot that looks at the treatment effect (political cue) on those with varying political knowledge. # The hypothesis here states: Only the those with less knowledge should react to the cue and behave as party loyalists presumably because the knowledgeable gain little from the treatment (political cue).
 
 # Model 1 is a linear regression that looks that the impact of political knowledge on response to cues. The authors include an interaction between liberal cues and knowledge as well as conservative cues and knowledge to see if there is any discrepancy between cues' effects with knowledge:
@@ -464,6 +434,7 @@ diff.cons.se <- sqrt(plx1$se.fit^2 + plx0$se.fit^2)
 upper.cons <- diff.cons + 1.96*diff.cons.se
 lower.cons <- diff.cons - 1.96*diff.cons.se
 
+par(mfrow = c(1, 2)) 
 #dev.new(width = 4.5, height = 7)
 # This plots the diff.cons (the causal effect of a conservative cue at each level of knowledge) with the upper and lower confidence intervals crafted with the standard error. The function also gives the range of the plots, the titles, and the axes. 
 # These are just the points, titles, and axes:
@@ -509,9 +480,11 @@ axis(1, at = seq(0, 8, 1))
 axis(2, at = seq(-.25, .15, .05), las = 2)
 box()
 ```
+<br>
+![Figure 2, Barber and Pope](/Users/carinehajjar/Desktop/fig2.png)
 
 ## Figure 3: Average Treatment Effect by Party strength
-```{r}
+```{r, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 # This code will culminate in plot that looks at the treatment effect (political cue) on those with varying partisan affiliation. 
 # The hypothesis here states: Strong party affiliates that share party with the cue-giver are more likely to be party loyalists.
 
@@ -524,7 +497,6 @@ colnames(newdata) <- c("race_white", "contrump", "libtrump", "pid7")
 #conservative treatment: The effect of a conservative cue on those who identify with a conservative party at different degrees (pid7 = 4-7)
 newdata1 = as.data.frame(cbind(rep(1, 4), rep(1, 4), rep(0, 4), seq(4, 7, 1)))
 colnames(newdata1) <- c("race_white", "contrump", "libtrump", "pid7")
-newdata1
 
 # These are predictions of the level of support at each Republican partisan level given the data table above with no cue:
 plx0 <- predict(model1, newdata = newdata, type = "response", se = T)
@@ -541,6 +513,8 @@ diff.cons.se <- sqrt(plx1$se.fit^2 + plx0$se.fit^2)
 upper.cons <- diff.cons + 1.96*diff.cons.se
 lower.cons <- diff.cons - 1.96*diff.cons.se
 
+# plots next to each other
+par(mfrow = c(1, 2)) 
 # This chunk plots the causal effects the same way that figure 2 did, but with partisanship on the x-axis:
 #dev.new(width = 4.5, height = 7)
 plot(seq(4, 7, 1), diff.cons, ylim = c(-.25, .25), pch = 16, ylab = "Estimated Average Treatment Effect", xlab = "Level of Partisan Affilitation", axes = F, main = "Conservative Trump Treatment")
@@ -580,9 +554,11 @@ box()
 
 # ADD ON BY LOOKING AT PARTY AFFILIATION EFFECT ON DEMOCRATS
 ```
+<br>
+![Figure 3, Barber and Pope](/Users/carinehajjar/Desktop/fig3.png)
 
 ## Figure 4: Average Treatment Effect by Trump Approval
-```{r}
+```{r, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 # This code will culminate in plot that looks at the treatment effect (political cue) on those with varying approval levels of Trump. 
 # The hypothesis here states: Those who approve of the cue-giver should be more likely to be party loyalists. 
 
@@ -609,6 +585,7 @@ diff.cons.se <- sqrt(plx1$se.fit^2 + plx0$se.fit^2)
 upper.cons <- diff.cons + 1.96*diff.cons.se
 lower.cons <- diff.cons - 1.96*diff.cons.se
 
+par(mfrow = c(1, 2)) 
 # Here is the plot of the treatment effect of a conservative cue on different levels of Trump approval (the steps are almost the same as those in previous figures):
 #dev.new(width = 4.5, height = 7)
 plot(seq(1, 5, 1), diff.cons, ylim = c(-.15, .22), pch = 16, ylab = "Estimated Average Treatment Effect", xlab = "Level of Trump Approval", axes = F, main = "Conservative Trump Treatment")
@@ -645,10 +622,11 @@ axis(1, at = seq(1, 5, 1), labels = c("Strongly\nDisapprove", "", "Neutral", "",
 axis(2, at = seq(-.25, .25, .05), las = 2)
 box()
 ```
-
+<br>
+![Figure 4, Barber and Pope](/Users/carinehajjar/Desktop/fig4.png)
 
 ## Figure 5: Average Treatment Effect by Self-Described Ideology 
-```{r}
+```{r, fig.height = 4, fig.width= 6.5, fig.align= "center"}
 # This code will culminate in plot that looks at the treatment effect (political cue) on those with varying ideologies. 
 # The hypothesis here states: Self-described conservatives should hold firm to their presumed beliefs and are less likely to be party loyalists because they stick with their self-described policy tenets.
 
@@ -674,6 +652,7 @@ diff.cons.se <- sqrt(plx1$se.fit^2 + plx0$se.fit^2)
 upper.cons <- diff.cons + 1.96*diff.cons.se
 lower.cons <- diff.cons - 1.96*diff.cons.se
 
+par(mfrow = c(1, 2)) 
 # plots
 #dev.new(width = 4.5, height = 7)
 plot(seq(1, 5, 1), diff.cons, ylim = c(-.16, .16), pch = 16, ylab = "Estimated Average Treatment Effect", xlab = "Self-Placed Ideology", axes = F, main = "Conservative Trump Treatment")
@@ -708,7 +687,8 @@ axis(2, at = seq(-.25, .25, .05), las = 2)
 box()
 
 ```
-
+<br>
+![Figure 5, Barber and Pope](/Users/carinehajjar/Desktop/fig5.png)
 
 ## Replication: What I Achieved and What I Did Not 
 A clear statement about what aspects of the paper you were able to replicate and which parts, if any, you were not able to replicate.
